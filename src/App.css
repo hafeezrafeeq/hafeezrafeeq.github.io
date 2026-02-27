@@ -10,3 +10,44 @@ body{
 * {
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: "f-bold";
+  src: url(./font/FoundersGrotesk-Semibold.ttf);
+}
+
+@font-face {
+  font-family: "f-light";
+  src: url(./font/NeueMontreal-Light.otf);
+}
+
+@font-face {
+  font-family: "f-medium";
+  src: url(./font/NeueMontreal-Medium.otf);
+}
+
+@font-face {
+  font-family: "f-regular";
+  src: url(./font/NeueMontreal-Regular.otf);
+}
+
+.btn-contect{
+  width: 11vw;
+  height: 3.5vw;
+  background: #313131;
+  color: white;
+  padding: 16px  8px;
+  padding-left: 20px;
+  border-radius: 50px;
+  font-size: 1.1vw;
+  font-family: "f-regular";
+}
+
+.btn-arrow {
+  display: inline-block;
+   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-contect:hover .btn-arrow {
+  transform: rotate(-60deg);
+}

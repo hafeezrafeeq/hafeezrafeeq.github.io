@@ -1,21 +1,26 @@
 
 import React from "react"
+import { HiArrowRight } from "react-icons/hi2";
 
 const Navbar = () => {
 
+
   return (
     <>
-      <nav className="flex justify-around ">
-        <div className="logo">logo</div>
+      <nav className="flex justify-between items-center font-[f-regular] py-4 px-14 border-gray-300 border-b-[0.2px] ">
+        <div className="logo ">logo</div>
 
-        <div className="flex gap-6">
+        <div className="flex gap-12">
           <a href="Home">Home</a>
           <a href="About">About</a>
           <a href="Service">Service</a>
           <a href="Contect">Contect</a>
         </div>
 
-        <div className="btn-contect">Contect Now</div>
+        <button className="btn-contect flex justify-between items-center">
+          Contect Now
+          < HiArrowRight className="btn-arrow text-[#131313] p-[2px] text-3xl rounded-full bg-[#c9ee7d]" />
+        </button>
 
       </nav>
 
