@@ -1,6 +1,7 @@
 
 import React from "react"
 import { HiArrowRight } from "react-icons/hi2";
+import { motion } from "motion/react"
 
 const Navbar = () => {
 
@@ -11,11 +12,23 @@ const Navbar = () => {
         <div className="logo ">logo</div>
 
         <div className="flex gap-12">
-          <a href="Home">Home</a>
-          <a href="About">About</a>
-          <a href="Service">Service</a>
-          <a href="Contect">Contect</a>
+          {[{ name: "Home", Link: "#" },
+          { name: "About", Link: "#about" },
+          { name: "Service", Link: "#home" },
+          { name: "Contect", Link: "#home" }
+          ].map((item,index)=>(
+            <motion.a
+            key={index}
+            href={item.link}
+            className="border-b-2"
+            >
+              {item.name}
+            </motion.a>
+          ))}
+          
         </div>
+
+       
 
         <button className="btn-contect flex justify-between items-center">
           Contect Now
